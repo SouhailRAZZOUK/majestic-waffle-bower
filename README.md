@@ -1,4 +1,4 @@
-# Majestic Waffle
+# Majestic Waffle V1.0.1
 
 A set of controls and tools made for WinJS applications, it contains a lot of controls, that can be used in a declarative way or via code, the same way as of WinJS UI controls, and a set of tools that I find interesting, and helped me accomplish the tools
 
