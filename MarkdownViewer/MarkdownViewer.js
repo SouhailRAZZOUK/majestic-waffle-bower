@@ -14,7 +14,7 @@
                     responseType: "text",
                 });
             }
-            WinJS.UI.Fragments.render("/controls/MarkdownViewer/MarkdownViewer.html", this._element)
+            WinJS.UI.Fragments.render("./MarkdownViewer/MarkdownViewer.html", this._element)
                 .then(() => {
                 self._viewer = WinJS.Utilities.query(".viewer", self._element)[0];
                 return (fileXHR) ? fileXHR.then((result) => {

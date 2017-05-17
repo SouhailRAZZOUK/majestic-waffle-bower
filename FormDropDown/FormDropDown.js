@@ -6,7 +6,7 @@
             this._element = element;
             this._dataSource = new WinJS.Binding.List(data);
             WinJS.Utilities.addClass(this._element, "form-dropdown");
-            WinJS.UI.Fragments.render("/controls/FormDropDown/FormDropDown.html", this._element).done(function () {
+            WinJS.UI.Fragments.render("./FormDropDown/FormDropDown.html", this._element).done(function () {
                 self._selectElement = self._element.querySelector("select");
                 WinJS.Utilities.addClass(self._selectElement, "win-dropdown");
                 WinJS.UI.process(self._selectElement).then(function () {
