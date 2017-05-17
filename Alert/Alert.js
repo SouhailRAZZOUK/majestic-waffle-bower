@@ -20,7 +20,7 @@
             if (!this._isInline) {
                 stack.appendChild(this._element);
             }
-            WinJS.UI.Fragments.render("./Alert/Alert.html", this._element).done(function () {
+            WinJS.UI.Fragments.render("Alert/Alert.html", this._element).done(function () {
                 let contentElement = WinJS.Utilities.query(".content", self._element)[0];
                 let closeSpan = document.createElement("span");
                 self.closeButton = WinJS.Utilities.query("button.close", self._element)[0];

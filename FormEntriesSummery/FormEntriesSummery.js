@@ -5,7 +5,7 @@
             this._element = element;
             this._entries = options.entries || [];
             this._callbacks = options.callbacks || [];
-            WinJS.UI.Fragments.render("./FormEntriesSummery/FormEntriesSummery.html", this._element).done(function () {
+            WinJS.UI.Fragments.render("FormEntriesSummery/FormEntriesSummery.html", this._element).done(function () {
                 self._summeryElement = self._element.querySelector("#summery-repeater");
                 WinJS.UI.process(self._summeryElement).then(function () {
                     self._repeater = self._summeryElement.winControl;
