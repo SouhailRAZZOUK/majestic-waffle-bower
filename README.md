@@ -1,4 +1,4 @@
-# Majestic Waffle V1.0.2
+# Majestic Waffle
 
 A set of controls and tools made for WinJS applications, it contains a lot of controls, that can be used in a declarative way or via code, the same way as of WinJS UI controls, and a set of tools that I find interesting, and helped me accomplish the tools
 
@@ -40,7 +40,20 @@ example: (Alert control)
 
 ```
 
-2. Call the desired control in your app:
+2. Correct the `MajesticWaffle.UI.controlsPath` variable value in the start of your app, this variable should contain the location where your controls exist:
+
+```javascript
+
+MajesticWaffle.UI.controlsPath = "/path/to/majestic-waffle";
+
+// Example:
+
+/*This is the default value, so your browser will look for your controls in bower_components folder for majestic-waffle*/
+MajesticWaffle.UI.controlsPath = "/bower_components/majestic-waffle"; 
+
+```
+
+3. Call the desired control in your app:
 
   - Declarative: 
   
@@ -86,4 +99,6 @@ Improvment suggestions are very welcome too, you can
 
 ## Contribution
 
-Please head to the [Majestic Waffle repository](https://github.com/SouhailRAZZOUK/majestic-waffle).
+As usual, github fork and pull request are available, feel free to use them :D . Accepted pull requests are the ones that enclude new features(controls, tools ...) or fix any of the issues mentioned in the issues section.
+
+You can add yourself to the contributors section of [`package.json`](/package.json) too if you want to.
