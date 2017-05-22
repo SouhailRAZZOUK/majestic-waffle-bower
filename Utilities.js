@@ -70,6 +70,9 @@
         return (callback instanceof Function) ? callback(key) : callback;
     };
     WinJS.Namespace.define("MajesticWaffle", {
+        UI: {
+            controlsPath: "/bower_components/majestic-waffle"
+        },
         Utilities: {
             generateUUID: generateUUID,
             underage: underage,

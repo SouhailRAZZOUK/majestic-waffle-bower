@@ -20,7 +20,7 @@ Please make sure you called them before calling any control that depends on any 
 
 | Provider | Command |
 | -------- | ------- |
-| npm | `$ npm i -S majestic-waffle` |
+<!--| npm | `$ npm i -S majestic-waffle` |-->
 | bower | `$ bower install majestic-waffle` |
 | yarn | `$ yarn add majestic-waffle` |
 | clone/download via Git | `$ git clone https://github.com/SouhailRazzouk/majestic-waffle.git` |

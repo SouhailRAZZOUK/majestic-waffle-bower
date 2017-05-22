@@ -3,7 +3,7 @@
         constructor(element, options) {
             let self = this;
             this._element = element;
-            WinJS.UI.Fragments.render("LoadingRing/LoadingRing.html", this._element).done(function () {
+            WinJS.UI.Fragments.render(MajesticWaffle.UI.controlsPath + "/LoadingRing/LoadingRing.html", this._element).done(function () {
                 if (options.showOnRender)
                     return self.show();
                 self.hide();
