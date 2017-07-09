@@ -22,16 +22,16 @@
             this._browseButtonElement.innerText = fileName ? fileName : "Choose a file...";
         }
         fileDragHover(e) {
-            e.stopPropagation();
+            // e.stopPropagation();
             e.preventDefault();
             (e.type === "dragover") ? this._fileDropElement.classList.add("hover") : this._fileDropElement.classList.remove("hover");
         }
         fileDropHandler(e) {
-            e.stopPropagation();
+            // e.stopPropagation();
             e.preventDefault();
             this.fileDragHover(e);
             this._files = e.dataTransfer.files;
-            this.dispatchEvent("onchange");
+            this.dispatchEvent("change");
         }
         addEventListener(name, listener, useCapture) {
             this._element.addEventListener(name, listener, useCapture);
@@ -44,7 +44,7 @@
         }
         _wireUpEvents() {
             let self = this;
-            this.addEventListener("onchange", self.updateBrowseButtonText.bind(this));
+            this.addEventListener("change", self.updateBrowseButtonText.bind(this));
             this._fileDropElement.addEventListener("dragover", this.fileDragHover.bind(this), false);
             this._fileDropElement.addEventListener("dragleave", this.fileDragHover.bind(this), false);
             this._fileDropElement.addEventListener("drop", this.fileDropHandler.bind(this), false);
@@ -52,7 +52,7 @@
             this._fileInputElement.addEventListener("blur", () => self._fileInputElement.classList.remove("has-focus"));
             this._fileInputElement.addEventListener("change", () => {
                 self._files = self._fileInputElement.files;
-                self.dispatchEvent("onchange");
+                self.dispatchEvent("change");
             });
         }
     }

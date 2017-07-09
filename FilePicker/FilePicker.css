@@ -1,9 +1,16 @@
 .mw-filepicker {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 1rem;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
   text-align: center;
   margin: 8px 0; }
+  @media (min-width: 0px) {
+    .mw-filepicker p {
+      display: none; } }
+  @media (min-width: 751px) {
+    .mw-filepicker {
+      border: 2px dashed rgba(255, 255, 255, 0.2); }
+      .mw-filepicker p {
+        display: block; } }
 
 .mw-filepicker.hover {
   background-color: rgba(255, 255, 255, 0.2);
