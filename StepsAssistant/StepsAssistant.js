@@ -41,9 +41,8 @@
                 return;
             }
             this._disposed = true;
-            let step;
-            for (step in this._steps) {
-                step.winControl.dispose();
+            for (let step of this._steps) {
+                step.dispose();
             }
             this._steps = null;
             this._events.forEach((event) => self.removeEventListener(event));
@@ -146,22 +145,17 @@
             for (let command of this._finalCommands)
                 command.setAttribute("disabled", "true");
             this._progressElement.winControl.show();
-            const complete = () => {
+            const enableCommands = () => {
                 for (let command of self._finalCommands)
                     command.removeAttribute("disabled");
                 self._progressElement.winControl.hide();
-            };
-            const error = () => {
-                for (let command of self._finalCommands)
-                    command.removeAttribute("disabled");
-                self._progressElement.winControl.hide();
-            };
-            let submitPromise = function (complete, error, progress) {
-                self.onsubmit();
             };
             return new WinJS.Promise((complete, error) => {
                 self.onsubmit();
-            });
+                if (complete) {
+                    complete();
+                }
+            }, enableCommands);
         }
     }
     WinJS.Namespace.define("MajesticWaffle.UI", { StepsAssistant: StepsAssistant });
