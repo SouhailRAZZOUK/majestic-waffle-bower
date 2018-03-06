@@ -1,0 +1,50 @@
+.mw-sidepanel {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  z-index: 100;
+  width: 320px;
+  height: 100%;
+  background: inherit;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .mw-sidepanel--open {
+    visibility: visible; }
+    .mw-sidepanel--open.mw-sidepanel--right {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+    .mw-sidepanel--open.mw-sidepanel--left {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  .mw-sidepanel--right {
+    right: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+  .mw-sidepanel--left {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  .mw-sidepanel__content-box {
+    width: 100%;
+    height: calc(100% - 53px);
+    background: rgba(127, 127, 127, 0.5);
+    padding: 15px 15px 0;
+    box-sizing: border-box;
+    overflow-y: scroll; }
+    .mw-sidepanel__content-box.mw-sidepanel__content-box--full-height {
+      height: 100%; }
+  .mw-sidepanel__commands {
+    height: 53px;
+    padding: 10px;
+    background: rgba(127, 127, 127, 0.5);
+    box-sizing: border-box;
+    text-align: center; }
+    .mw-sidepanel__commands:empty {
+      display: none;
+      height: 0px; }
+    .mw-sidepanel__commands button {
+      margin: 0 5px; }
+      .mw-sidepanel__commands button:first-child {
+        margin: 0 5px 0 0; }
+      .mw-sidepanel__commands button:last-child {
+        margin: 0 0 0 5px; }
