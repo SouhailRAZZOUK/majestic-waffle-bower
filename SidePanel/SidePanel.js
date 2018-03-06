@@ -45,7 +45,7 @@ var MajesticWaffle;
             }
             set side(value) {
                 this._side = value;
-                for (let sideType of Object.keys(UI.SidePanelSides)) {
+                for (let sideType of ["right", "left"]) {
                     if (sideType !== value) {
                         WinJS.Utilities.removeClass(this._element, `mw-sidepanel--${sideType}`);
                     }
