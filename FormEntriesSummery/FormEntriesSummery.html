@@ -2,15 +2,15 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="FormEntriesSummery.css">
+    <link rel="stylesheet" href="FormEntriesSummery.css"/>
     <script src="FormEntriesSummery.js"></script>
   </head>
   <body>
     <div id="mw-summery-repeater" data-win-control="WinJS.UI.Repeater">
       <div class="mw-summery-item">
-        <label data-win-bind="textContent: key._name" class="win-type-base name"></label>
-        <p data-win-bind="textContent: key._value" class="value"></p>
-        <button data-win-bind="onclick: callback" class="edit-entry"><span>&#xE104;</span></button>
+        <label class="win-type-base name" data-win-bind="textContent: key._name"></label>
+        <p class="value" data-win-bind="textContent: key._value"></p>
+        <button class="edit-entry" data-win-bind="onclick: callback"><span>&#xE104;</span></button>
       </div>
     </div>
   </body>
