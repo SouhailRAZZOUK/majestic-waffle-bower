@@ -3,9 +3,9 @@
         constructor(element, options) {
             let self = this;
             this._element = element;
-            this._title = options["title"];
-            this._scenario = options["scenario"];
-            this._href = element.getAttribute("href") || options["href"];
+            this._title = options.title;
+            this._scenario = options.scenario;
+            this._href = element.getAttribute("href") || options.href;
             if (this._title) {
                 this._element.innerText = this._title;
             }
@@ -18,7 +18,7 @@
                 if (self._scenario) {
                     return MajesticWaffle.Navigation.navigate(self._scenario);
                 }
-                WinJS.Navigation.navigate(self._href);
+                return WinJS.Navigation.navigate(self._href);
             });
         }
         get element() {
