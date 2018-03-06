@@ -5,6 +5,11 @@
             let textElement = document.createElement("p");
             let typePrefix = "mw-alert mw-alert-";
             let stack = document.getElementById("mw-alerts-stack");
+            if (!stack) {
+                stack = document.createElement("div");
+                stack.id = "mw-alerts-stack";
+                document.body.appendChild(stack);
+            }
             WinJS.Utilities.addClass(textElement, "text");
             this._element = element;
             this._text = options["text"];
